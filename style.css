@@ -213,3 +213,22 @@ body {
 .hero button {
     animation: fadeInUp 1s ease forwards;
 }
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ec4899, #ef4444);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.6);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.8);
+}
