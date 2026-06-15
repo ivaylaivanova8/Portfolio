@@ -1,214 +1,213 @@
-<!DOCTYPE html>
-<html lang="bg">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ивайла Иванова | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<nav class="navbar">
-    <h2>Ивайла Иванова</h2>
+html{
+    scroll-behavior:smooth;
+}
 
-    <ul>
-        <li><a href="#home">Начало</a></li>
-        <li><a href="#about">За мен</a></li>
-        <li><a href="#skills">Умения</a></li>
-        <li><a href="#projects">Проекти</a></li>
-        <li><a href="#contact">Контакти</a></li>
-    </ul>
-</nav>
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#0f172a,#312e81,#db2777,#ef4444);
+    color:white;
+}
 
-<section class="hero" id="home">
-    <img src="profile.jpg" alt="Ивайла Иванова" class="profile-pic">
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,.8);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
 
-    <h1>Здравей, аз съм Ивайла Иванова!</h1>
-    <p>Junior Full-Stack Developer</p>
+.navbar ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
 
-    <a href="#projects" class="hero-btn">Виж проектите ми</a>
-</section>
+.navbar a{
+    color:white;
+    text-decoration:none;
+}
 
-<section id="about" class="about">
-    <h2>За мен</h2>
+.navbar a:hover{
+    color:#ec4899;
+}
 
-    <p>
-        Казвам се Ивайла Иванова и съм начинаещ Full-Stack Developer с интерес към уеб разработката,
-        разработката на приложения и работата с бази данни.
-    </p>
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    gap:20px;
+}
 
-    <p>
-        Работя с HTML, CSS, JavaScript, C#, Windows Forms и SQL. Създавам практически проекти,
-        чрез които развивам уменията си и натрупвам реален опит в програмирането.
-    </p>
+.profile-pic{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid rgba(255,255,255,.3);
+    box-shadow:0 0 40px rgba(236,72,153,.5);
+}
 
-    <p>
-        Стремя се постоянно да усъвършенствам знанията си и да изграждам модерни,
-        функционални и удобни за потребителите приложения.
-    </p>
-</section>
+.hero h1{
+    font-size:3rem;
+}
 
-<section id="skills" class="skills">
-    <h2>Умения</h2>
+.hero p{
+    font-size:1.3rem;
+    color:#cbd5e1;
+}
 
-    <div class="skills-container">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>C#</span>
-        <span>.NET</span>
-        <span>SQL</span>
-        <span>Windows Forms</span>
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>Visual Studio</span>
-    </div>
-</section>
+.hero-btn{
+    display:inline-block;
+    padding:14px 32px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(90deg,#ec4899,#ef4444);
+}
 
-<section id="projects" class="projects">
-    <h2>Проекти</h2>
+.about,
+.skills,
+.projects,
+.contact{
+    padding:120px 50px;
+    text-align:center;
+}
 
-    <div class="project-card">
-        <img src="music-player.jpg" alt="Интелигентен музикален плеър с Raspberry Pi" class="project-image">
+.about p{
+    max-width:850px;
+    margin:20px auto;
+    line-height:1.8;
+    color:#cbd5e1;
+}
 
-        <h3>Интелигентен музикален плеър с Raspberry Pi</h3>
+.skills{
+    background:rgba(15,23,42,.75);
+}
 
-        <p>
-            Интерактивна система за управление на MP3 музика чрез Raspberry Pi, ESP32-S3,
-            OLED дисплей и физически GPIO бутони.
-        </p>
+.skills h2,
+.about h2,
+.projects h2,
+.contact h2{
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
 
-        <div class="tech-stack">
-            <span>Python</span>
-            <span>Raspberry Pi</span>
-            <span>ESP32-S3</span>
-            <span>GPIO</span>
-            <span>OLED SSD1306</span>
-            <span>MAX98357A DAC</span>
-        </div>
+.skills-container{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
 
-        <ul>
-            <li>START / STOP управление</li>
-            <li>NEXT / PREV смяна на песни</li>
-            <li>Показване на песен и статус на OLED дисплей</li>
-            <li>Възпроизвеждане на звук през DAC аудио модул</li>
-        </ul>
+.skills-container span{
+    padding:12px 22px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ec4899,#ef4444);
+    box-shadow:0 0 20px rgba(236,72,153,.35);
+}
 
-        <h4>Какво научих</h4>
+.projects{
+    background:rgba(15,23,42,.85);
+}
 
-        <p>
-            Работа с Raspberry Pi, ESP32-S3, GPIO пинове, OLED дисплеи,
-            I2C комуникация и разработване на Python приложения за управление на хардуерни устройства.
-        </p>
+.project-card{
+    max-width:900px;
+    margin:60px auto;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    text-align:left;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
 
-        <h4>Резултат</h4>
+.project-image{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:20px;
+}
 
-        <p>
-            Разработих напълно функционален MP3 плеър с физически бутони,
-            OLED дисплей и възможност за бъдещо разширяване с Bluetooth, Wi-Fi и уеб интерфейс.
-        </p>
+.project-card h3{
+    margin-bottom:15px;
+}
 
-        <div class="project-links">
-            <a href="https://github.com/ivaylaivanova8/Portfolio" target="_blank">GitHub</a>
-            <a href="https://drive.google.com/file/d/1mRxEhrKxF6gvg_GoeqiDJsU1npOTMvf6/view?usp=drive_link" target="_blank">
-                Видео демонстрация
-            </a>
-        </div>
-    </div>
+.project-card p{
+    line-height:1.7;
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
 
-    <div class="project-card">
-        <img src="shadow-escape.jpg" alt="Shadow Escape" class="project-image">
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0;
+}
 
-        <h3>Shadow Escape - 2D Unity Game</h3>
+.tech-stack span{
+    background:#2563eb;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:.9rem;
+}
 
-        <p>
-            2D платформена игра, разработена в Unity. Играчът трябва да избягва препятствия,
-            да събира монети и да достигне финалната точка.
-        </p>
+.project-links{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
 
-        <div class="tech-stack">
-            <span>Unity</span>
-            <span>C#</span>
-            <span>Rigidbody2D</span>
-            <span>Collider2D</span>
-            <span>TextMeshPro</span>
-        </div>
+.project-links a{
+    text-decoration:none;
+    color:white;
+    padding:12px 24px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ec4899,#ef4444);
+}
 
-        <ul>
-            <li>Движение наляво и надясно</li>
-            <li>Скачане и избягване на препятствия</li>
-            <li>Събиране на монети</li>
-            <li>Система за победа (YOU WIN)</li>
-        </ul>
+.contact{
+    background:rgba(15,23,42,.85);
+}
 
-        <h4>Какво научих</h4>
+.contact p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
 
-        <p>
-            Работа с Unity Engine, C#, физика, колизии, игрова логика и UI интерфейс.
-        </p>
+.contact-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
-        <h4>Резултат</h4>
+.contact-links a{
+    text-decoration:none;
+    color:white;
+    padding:14px 28px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ec4899,#ef4444);
+}
 
-        <p>
-            Разработих напълно функционираща 2D платформена игра с игрова логика,
-            монети и система за завършване на нивото.
-        </p>
-
-        <div class="project-links">
-            <a href="https://github.com/ivaylaivanova8/Shadow-Escape" target="_blank">GitHub</a>
-            <a href="https://drive.google.com/file/d/1FFw43kqL3cisXY_cfYrhXuaLrN49VMGj/view?usp=drive_link" target="_blank">
-                Видео демонстрация
-            </a>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <img src="cinema-manager.png" alt="Cinema Manager" class="project-image">
-
-        <h3>Cinema Manager 🎬</h3>
-
-        <p>
-            Windows Forms приложение за управление на кино прожекции. Позволява добавяне,
-            редактиране и изтриване на прожекции, както и преглед на статистика за местата
-            и цените на билетите.
-        </p>
-
-        <div class="tech-stack">
-            <span>C#</span>
-            <span>Windows Forms</span>
-            <span>.NET</span>
-            <span>Visual Studio</span>
-        </div>
-
-        <div class="project-links">
-            <a href="https://github.com/ivaylaivanova8/CinemaManager" target="_blank">GitHub</a>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <h2>Контакти</h2>
-
-    <p>
-        Ако желаете да се свържете с мен, можете да използвате следните канали:
-    </p>
-
-    <div class="contact-links">
-        <a href="mailto:ivaylaivanova0@abv.bg">📧 Имейл</a>
-
-        <a href="https://github.com/ivaylaivanova8" target="_blank">
-            💻 GitHub
-        </a>
-
-        <a href="https://www.linkedin.com/" target="_blank">
-            💼 LinkedIn
-        </a>
-    </div>
-</section>
-
-<footer class="footer">
-    <p>© 2025 Ивайла Иванова | Portfolio</p>
-</footer>
-
-</body>
-</html>
+.footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,.3);
+    color:#cbd5e1;
+}
