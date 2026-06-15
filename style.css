@@ -115,12 +115,14 @@ body {
 
 .project-card {
     max-width: 900px;
-    margin: auto;
-    background: #1e293b;
+    margin: 80px auto; /* увеличено разстояние */
     padding: 30px;
-    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     text-align: left;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
 }
 
 .project-card h3 {
