@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #0f172a, #312e81, #db2777, #ef4444);
@@ -210,7 +215,7 @@ body {
 
 .hero h1,
 .hero p,
-.hero button {
+.hero-btn {
     animation: fadeInUp 1s ease forwards;
 }
 
